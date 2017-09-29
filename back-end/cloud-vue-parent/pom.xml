@@ -12,7 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<docker.plugin.version>0.3.258</docker.plugin.version>
+		<docker.plugin.version>0.4.13</docker.plugin.version>
 		<spring-boot-admin.version>1.4.5</spring-boot-admin.version>
         <druid.version>1.0.18</druid.version>
 	</properties>
@@ -79,6 +79,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>${docker.plugin.version}</version>
+				<configuration>
+					<dockerHost>http://k8s-master:2375</dockerHost>
+				</configuration>
 			</plugin>
 		</plugins>
 		<defaultGoal>compile</defaultGoal>
