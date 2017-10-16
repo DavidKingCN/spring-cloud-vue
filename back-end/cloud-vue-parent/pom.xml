@@ -86,7 +86,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>${docker.plugin.version}</version>
 				<configuration>
-					<dockerHost>http://192.168.6.150:2375</dockerHost>
+					<dockerHost>http://k8s-slave1:2375</dockerHost>
 				</configuration>
 			</plugin>
 		</plugins>

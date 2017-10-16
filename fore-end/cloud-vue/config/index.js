@@ -23,7 +23,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://localhost:80',
+        target: 'http://k8s-slave2:31140',
         pathRewrite: {
           '^/api': '/'
         }
